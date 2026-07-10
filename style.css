@@ -1,0 +1,119 @@
+/* 爱津智能涡旋仪 产品手册站点样式 */
+:root{
+  --primary:#0ea5e9;
+  --primary-dark:#0369a1;
+  --accent:#14b8a6;
+  --bg:#f0f9ff;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#64748b;
+  --radius:18px;
+  --shadow:0 10px 30px rgba(2,132,199,.12);
+  --shadow-sm:0 4px 14px rgba(2,132,199,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",sans-serif;
+  color:var(--text);
+  background:linear-gradient(160deg,#e0f2fe 0%,#f0fdfa 100%);
+  min-height:100%;
+  display:flex;flex-direction:column;
+  line-height:1.6;
+}
+.wrap{max-width:560px;margin:0 auto;width:100%;padding:0 20px;flex:1}
+
+/* 顶部 */
+.hero{
+  background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%);
+  color:#fff;padding:54px 24px 40px;text-align:center;
+  border-bottom-left-radius:34px;border-bottom-right-radius:34px;
+  box-shadow:var(--shadow);
+}
+.hero .logo{
+  width:78px;height:78px;margin:0 auto 16px;border-radius:20px;
+  background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;
+  font-size:40px;backdrop-filter:blur(4px);
+}
+.hero h1{font-size:26px;font-weight:700;letter-spacing:1px}
+.hero p{margin-top:8px;font-size:14px;opacity:.92}
+
+/* 主体 */
+.section{padding:34px 0 10px}
+.section h2{font-size:18px;margin-bottom:18px;color:var(--primary-dark)}
+
+/* 大按钮 */
+.btn{
+  display:flex;align-items:center;gap:16px;
+  width:100%;padding:22px 22px;margin-bottom:18px;
+  background:var(--card);border:none;border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);text-decoration:none;color:var(--text);
+  cursor:pointer;transition:transform .15s ease,box-shadow .15s ease;
+  text-align:left;
+}
+.btn:hover,.btn:active{transform:translateY(-3px);box-shadow:var(--shadow)}
+.btn .ico{
+  flex:0 0 56px;width:56px;height:56px;border-radius:16px;
+  display:flex;align-items:center;justify-content:center;font-size:28px;color:#fff;
+}
+.btn .ico.intro{background:linear-gradient(135deg,#0ea5e9,#0369a1)}
+.btn .ico.manual{background:linear-gradient(135deg,#14b8a6,#0d9488)}
+.btn .txt strong{display:block;font-size:18px;font-weight:600}
+.btn .txt span{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+.btn .arrow{margin-left:auto;color:var(--muted);font-size:22px}
+
+/* 返回栏 */
+.topbar{
+  display:flex;align-items:center;gap:12px;
+  padding:16px 20px;position:sticky;top:0;background:rgba(255,255,255,.85);
+  backdrop-filter:blur(8px);border-bottom:1px solid #e2e8f0;z-index:10;
+}
+.topbar a.back{
+  color:var(--primary-dark);text-decoration:none;font-size:15px;font-weight:600;
+  display:flex;align-items:center;gap:4px;
+}
+.topbar .title{font-size:17px;font-weight:700}
+
+/* 卡片 */
+.card{
+  background:var(--card);border-radius:var(--radius);padding:24px;
+  box-shadow:var(--shadow-sm);margin-bottom:18px;
+}
+.card h3{font-size:17px;margin-bottom:10px;color:var(--primary-dark)}
+.card p{font-size:14px;color:var(--muted);margin-bottom:10px}
+.features{list-style:none;margin:14px 0 0}
+.features li{
+  display:flex;gap:10px;padding:10px 0;border-bottom:1px dashed #e2e8f0;
+  font-size:14px;
+}
+.features li:last-child{border-bottom:none}
+.features li .dot{color:var(--accent);font-weight:700}
+
+/* 说明书卡片 */
+.manual-card{
+  background:var(--card);border-radius:var(--radius);padding:24px;
+  box-shadow:var(--shadow-sm);margin-bottom:18px;
+}
+.manual-card .head{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.manual-card .badge{
+  width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+  font-size:22px;color:#fff;
+}
+.manual-card .badge.en{background:linear-gradient(135deg,#0ea5e9,#0369a1)}
+.manual-card .badge.zh{background:linear-gradient(135deg,#f59e0b,#d97706)}
+.manual-card .head strong{display:block;font-size:17px}
+.manual-card .head span{font-size:13px;color:var(--muted)}
+.manual-card .actions{display:flex;gap:12px}
+.manual-card .actions a{
+  flex:1;text-align:center;padding:14px;border-radius:14px;text-decoration:none;
+  font-size:15px;font-weight:600;transition:transform .15s ease;
+}
+.manual-card .actions a:active{transform:scale(.97)}
+.manual-card .actions .preview{background:#e0f2fe;color:var(--primary-dark)}
+.manual-card .actions .download{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff}
+
+/* 页脚 */
+.footer{
+  text-align:center;padding:28px 20px 36px;color:var(--muted);font-size:12px;
+}
+.footer .brand{font-weight:600;color:var(--primary-dark);margin-bottom:4px}
